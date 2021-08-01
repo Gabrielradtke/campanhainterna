@@ -1,102 +1,78 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="pt-br">
 
 <head>
-  <!-- Required meta tags -->
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link
-    href="https://fonts.googleapis.com/css2?family=Asap:wght@600&family=Nunito:wght@300&family=Yellowtail&display=swap"
-    rel="stylesheet">
-  <link rel="stylesheet" type="text/css" href="css/normalize.css">
-  <link rel="stylesheet" type="text/css" href="css/style.css">
-
-  <title>GAIO - CAMPANHAS INTERNAS</title>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/50f803a4dc.js" crossorigin="anonymous"></script>
+    <title>TESTE</title>
 </head>
 
 <body>
-  <nav>
-    <img src="img/logo.png" alt="logo">
-    <a href="#"></a>
-    <ul>
-      <li><a href="#sobre">Sobre o GAIO</a></li>
-      <li><a href="#servicos">Campanhas</a></li>
-      <li><a href="#abccc">ABCCC</a></li>
-      <li><a href="#contatos">Contatos</a></li>
-    </ul>
+    <header>
+        <div class="center">
+            <div class="logo"><img src="/imagens/Logo-ABCCC.png"></a></div>
+            <div class="menu-bar">
+            <i class="fas fa-bars"></i>
+            </div>
+            <div class="nav-bar">
+                <ul class="list-topo">
+                    <li class="header-topo"><a href="#">SOBRE</a></li>
+                    <li class="header-topo"><a href="#">FAQ</a></li>
+                    <li class="header-topo"><a href="#">CONTATOS</a></li>
+                </ul>
+            </div>
+        </div>
+    </header>
 
-    <!-- botão para acessar area restrita adm -->
-    <nav>
-      <a href="#acesso" class="acesso">Acesso Interno</a>
-    </nav>
-  </nav>
 
-  <header id="topo">
-    <h1>Campanhas Internas GAIO</h1>
-    <p>
-      Lorem ipsum dolor sit amet, consectetur adipisci elit, sed eiusmod tempor incidunt ut labore et dolore magna
-      aliqua. Ut enim ad minim veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid
-      ex ea commodi consequatur. Quis aute iure reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
-      pariatur. Excepteur sint obcaecat cupiditat non proident, sunt in culpa qui officia deserunt mollit anim id est
-      laborum. </p>
-    <a href="#serviços" class="botao">Ver mais </a>
-  </header>
+    <div class="container">
+        <div class="caixaCalculo">
+            <div>
+                <p>Inserir a data de nascimento ANTERIOR</p>
+                <input type="date" id="start">
+                <button>Calcular Data</button>
+                <br>
+            </div>
+            <div class="dataCorreta">
+                <p>Data Correta é: </p>
+                <span class="teste"></span>
+                <span></span>
+            </div>
+        </div>
 
-  <section id="servicos">
-    <h2> Campanhas </h2>
-    <div>
-      <img src="img/campanha.png" alt="campanha">
-      <h3> Campanhas já realizadas </h3>
-      <p>Lorem ipsum dolor sit amet, consectetur adipisci elit, sed eiusmod tempor incidunt ut labore et dolore magna
-        aliqua</p>
+        <div class="caixaCalculo">
+            <div>
+                <p>Inserir a data de nascimento POSTERIOR</p>
+                <input type="date" id="start">
+                <button>Calcular Data</button>
+                <br>
+            </div>
+            <div class="dataCorreta">
+                <p>Data Correta é: </p>
+                <span class="teste"></span>
+                <span></span>
+            </div>
+        </div>
     </div>
-
-    <div>
-      <img src="img/cavalo.png" alt="abccc">
-      <h3> Campanhas já realizadas </h3>
-      <p>Lorem ipsum dolor sit amet, consectetur adipisci elit, sed eiusmod tempor incidunt ut labore et dolore magna
-        aliqua</p>
-    </div>
-
-    <div>
-      <img src="img/contato.png" alt="contato">
-      <h3> Campanhas já realizadas </h3>
-      <p>Lorem ipsum dolor sit amet, consectetur adipisci elit, sed eiusmod tempor incidunt ut labore et dolore magna
-        aliqua</p>
-    </div>
-  </section>
-  <section id="sobre">
-    <h2>Sobre</h2>
-    <p>
-      Lorem ipsum dolor sit amet, consectetur adipisci elit, sed eiusmod tempor incidunt ut labore et dolore magna
-      aliqua. Ut enim ad minim veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid
-      ex ea commodi consequatur. Quis aute iure reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
-      pariatur. Excepteur sint obcaecat cupiditat non proident, sunt in culpa qui officia deserunt mollit anim id est
-      laborum. </p>
-    <a href="#contato" class="botao">Contatos</a>
-  </section>
-  <section id="fotos">
-    <h2>Fotos</h2>
-    <img src="img/teste.jpg" alt="teste">
-    <img src="img/teste2.jpg" alt="teste2">
-    <img src="img/teste3.jpg" alt="teste3">
-  </section>
-
-  <section id="desenvolvimento">
-    <h2> Desenvolvedor </h2>
-    <p> Gabriel Radtke </p>
-    <div>
-      <img src="img/radtke.jpg" alt="marcaRadtke">
-    </div>
-  </section>
-
-  <footer>
-    <a href="#topo">VOLTAR AO TOPO</a>
-  </footer>
-
-
+    <footer>
+        <div class="container-social">
+            <ul>
+                <li class="rodape-list"><a href="www.facebook.com/gabrielradtke"><i class="fab fa-facebook"
+                            aria-hidden="true"></i></a></li>
+                <li class="rodape-list"><a href="www.twitter.com/gabrielradtke"><i class="fab fa-twitter"
+                            aria-hidden="true"></i></a></li>
+                <li class="rodape-list"><a href="www.linkedin.com/gabrielradtke"><i class="fab fa-linkedin"
+                            aria-hidden="true"></i></a></li>
+                <li class="rodape-list"><a href="www.github.com/gabrielradtke"><i class="fab fa-github"
+                            aria-hidden="true"></i></a></li>
+                <li class="rodape-list"><a href="www.instagram.com/gabrielradtke"><i class="fab fa-instagram"
+                            aria-hidden="true"></i></a></li>
+            </ul>
+        </div>
+        </div>
+    </footer>
+    <script src="index.js"></script>
 </body>
-
-</html>
