@@ -2,86 +2,148 @@
   margin: 0;
   padding: 0;
   border: 0;
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  background-color: #ffffff;
+  color: #FAA831;
 }
 
 /* INICIO MENU SUPERIOR  */
 header {
-  display: block;
-  width: 100%;
-  height: 60px;
-  background-color: #666666;
+  display: inline;
 }
 
-.center .logo {
-  float: left;
-  width: 40%;
+.center {
+  display: flex;
+  height: 60px;
+}
+
+.logo {
+  width: 33.3%;
+  height: 7.5vh;
 }
 
 .logo img {
-  padding: 0;
-  height: 8vh;
+  height: 7.5vh;
   width: auto;
   float: right;
-}
-
-.menu-bar {
-  width: 10%;
-  height: 8vh;
-  align-items: center;
-  display: inline-flex;
-  /* background-color: #0A66C2; */
-  color: #666666;
-}
-
-.menu-bar i {
-  width: 10%;
-  margin: auto;
-  align-items: center;
+  margin-top: 5px;
 }
 
 .nav-bar {
   width: 50%;
-  height: auto;
-  float:right;
-  margin-top: 1%;
-}
-
-.nav-bar list-topo {
-  margin: 2.5px;
+  height: 100%;
+  float: right;
 }
 
 .nav-bar ul .header-topo {
   display: inline-flex;
+  width: 22%;
+  height: 8.5vh;
 }
 
+.nav-bar .list-topo{
+  align-items: center;
+  text-align: center;
+  margin-top: 5px;
+}
+
+.menu-bar {
+  width: 66%;
+  height: 8vh;
+  align-items: center;
+}
+
+.menu-bar i {
+  width: 5%;
+  margin: auto;
+  align-items: center;
+}
 
 header ul li a {
   padding: 10%;
   text-decoration: none;
-  color: #ddd;
+  color: #FAA831;
   float: right;
   width: 100%;
   padding: 15px;
-  font-size: 12px;
 }
 
 header ul li a:hover {
   border: #262626;
-  padding: 10%;
   text-decoration: none;
-  color: #ddd;
+  color: #000000;
   float: right;
   width: 100%;
-  padding: 15px;
-  font-size: 15px;
   transition: 400ms;
 }
-
 /* Final Header */
 
+/* MENU RESPONSIVO */
+label[for="bt_menu"] {
+  padding: 5px;
+  background-color: #666666;
+  border-radius: 10%;
+  color: #262626;
+  text-align: center;
+  font-size: 30px;
+  cursor: pointer;
+  width: 50px;
+  height: 50px;
+}
 
-div.container {
-  height: 33%;
+#bt_menu {
+  display: none;
+}
+
+label[for="bt_menu"] {
+  display: none;
+}
+/* FIM MENU MOBILE */
+
+/* TEXTO INICIO */
+section {
+  margin-top: 20px;
+  margin-left: 110px;
+  margin-right: 110px;
+  position: relative;
+  height: 30vh;
+  justify-content: center;
+}
+
+h2 {
+  text-align: center;
+  padding: 2px;
+}
+
+.text-inicio {
+  border-radius: 15px;
+  text-align: justify;
+  background-color: darkgray;
+  -webkit-box-shadow: 0 5px 20px 0 rgba(0, 0, 0, 4);
+  box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.2), 0 5px 5px 0 rgba(0, 0, 0, 0.24);
+}
+
+/* INICIO PAGINA MANUTENÇAO */
+
+.section-manutencao{
+  width: auto;
+  text-align: center;
+  height: 600px;
+}
+
+.div-manutencao {
+  width: 100%;
+}
+
+.p-manutencao{
+  width: 100%;
+}
+
+/* CAIXAS DE CALCULOS */
+
+div.container-calculo {
+  margin: 0 0;
+  height: 13%;
   width: 100%;
   position: relative;
   display: flex;
@@ -97,7 +159,7 @@ div.container {
   z-index: 1;
   background: #FFFFFF;
   max-width: 330px;
-  margin: 10px 12px 100px;
+  margin: 10px 10px 2px;
   padding: 25px;
   text-align: center;
   box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.2), 0 5px 5px 0 rgba(0, 0, 0, 0.24);
@@ -109,17 +171,36 @@ div.container {
   position: relative;
   z-index: 1;
   background: #FFFFFF;
-  max-width: 360px;
-  margin: 10px 12px 100px;
+  max-width: 330px;
+  margin: 10px 10px 2px;
   padding: 25px;
   text-align: center;
   box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.2), 0 5px 5px 0 rgba(0, 0, 0, 0.24);
 }
 
-p {
-  color: black;
-  padding: 25px;
+.text-interno-inicio {
+  color: #000000;
+  padding: 20px 40px 10px;
 }
+
+.texto-interno-calculo{
+  color: #000000;
+  padding: 10px 10px 10px;
+  width: 100%;
+}
+
+#resPos {
+  color: #FAA831;
+  width: 100%;
+  font-size: larger;
+}
+
+#resAnt {
+  color: #FAA831;
+  width: 100%;
+  font-size: larger;
+}
+
 
 
 button {
@@ -163,16 +244,23 @@ input {
   font-size: 14px;
 }
 
+/* FAQ PERGUNTAS E RESPOSTAS */
+
+
+
+
+
+
 /* Footer Redes Sociais */
 
-footer{
-  display:grid;
+footer {
+  display: grid;
   align-items: center;
   align-content: center;
-  height: 220px;
+  height: 150px;
 }
 
-.container-social{
+.container-social {
   width: 100%;
   text-align: center;
   align-items: center;
@@ -187,7 +275,7 @@ ul li.rodape-list {
   margin-bottom: 0;
   text-decoration: none;
   align-items: center;
-  position:relative;
+  position: relative;
 }
 
 ul li.rodape-list a {
@@ -242,48 +330,99 @@ ul li.rodape-list:nth-child(5) a:hover .fab {
   color: #e4405f;
 }
 
+div .nome-dev{
+  width: 100%;
+}
+
+.nome-dev h4{
+  font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  padding-top: 2%;
+  text-align: center;
+}
+
 /* MEDIAS QUERIES  */
 
-@media screen and (max-width: 600px) {
-  .center .logo{
-    width: 30%;
-    display: flex;
+@media screen and (max-width: 800px) {
+  
+  header .center {
+    display: block;
+    width: 100%;
+    height: auto;
   }
 
-  .logo img {
-    margin-left: 30px;
-  }
-
-  .menu-bar{
-    display: inline-flex;
+  .center {
+    display: block;
+    width: 100%;
+    margin-left: -800px;
+    transition: all 0.4s;
+    align-items: center;
   }
   
+  
   .center .nav-bar {
-    display: inline-flex;
-  }
-
-  .list-topo {
-    display: flex;
+    display: block;
     width: 100%;
-    margin-right: 500px;
   }
-
-  div.container {
-    display:inline-block;
-    width: 100%;
-    padding: 0 0; 
-    height: auto;
-    margin: auto;
+  
+  .center .list-topo {
     align-items: center;
+    width: 100%;
+    height: 178px;
+  }
+  
+  
+  .nav-bar .list-topo .header-topo{
+    position: relative;
+    display: block;
+    width: 100%;
+    text-align: center;
+  }
+  
+  .header-topo a{
+    background-color: #666666;
+  }
+  
+  .center .logo {
+    display: none;
+  }
+
+  .logo {
+    background-color: #666666;
+  }
+
+  label[for="bt_menu"] {
+    display: block;
+  }
+
+  #bt_menu:checked~.center {
+    margin-left: 0px;
+  }
+
+  section {
+    display: inline;
+    align-items: center;
+    width: 100%;
+  }
+
+  .text-inicio {
+    align-items: center;
+    text-align: center;
+    margin-left: 10px;
+    margin-right: 10px;
+  }
+
+  .container-calculo{
+    display: block;
+    flex-wrap: wrap;
   }
 
   div.caixaCalculo,
   .caixaCalculo2 {
+    display: inline-block;
     align-items: center;
-    margin: auto;
+    margin: 5 5 5;
     width: 100%;
     height: auto;
-    padding: auto;
   }
 
   footer {
@@ -297,6 +436,5 @@ ul li.rodape-list:nth-child(5) a:hover .fab {
     width: 50%;
     display: inline-block;
   }
-
 
 }

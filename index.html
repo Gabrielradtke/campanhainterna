@@ -7,70 +7,93 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
     <script src="https://kit.fontawesome.com/50f803a4dc.js" crossorigin="anonymous"></script>
-    <title>TESTE</title>
+    <title>PÁGINA PRINCIPAL</title>
 </head>
 
 <body>
     <header>
+
+        <input type="checkbox" id="bt_menu">
+        <label for="bt_menu">&#9776;</label>
+
         <div class="center">
             <div class="logo"><img src="/imagens/Logo-ABCCC.png"></a></div>
-            <div class="menu-bar">
-            <i class="fas fa-bars"></i>
-            </div>
-            <div class="nav-bar">
+            <nav class="nav-bar">
                 <ul class="list-topo">
-                    <li class="header-topo"><a href="#">SOBRE</a></li>
-                    <li class="header-topo"><a href="#">FAQ</a></li>
-                    <li class="header-topo"><a href="#">CONTATOS</a></li>
+                    <li class="header-topo"><a href="sobre.html">SOBRE</a></li>
+                    <li class="header-topo"><a href="faq.html">FAQ</a></li>
+                    <li class="header-topo"><a href="contatos.html">CONTATOS</a></li>
                 </ul>
-            </div>
+            </nav>
+
+            <span class="btn-menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </span>
+
         </div>
     </header>
 
+    <section>
+        
+        <div class="text-inicio">
+        <h2> INTERVALO ENTRE PARTOS </h2>
+        <p class="text-interno-inicio"> Conforme regulamento do Serviço Genealógico da ABCCC disposto no Art. 50, não serão inscritos produtos que
+            venham a nascer com período de gestação inferior a 310 (trezentos e
+            dez) e superior a 365 (trezentos e sessenta e cinco) dias. Com isso as tabelas abaixo possuem a intenção de
+            auxíliar de forma simples e rápido no cálculo correto.
+        </p>
+        <p class="text-interno-inicio">Este projeto foi Desenvolvido de forma independente.</p>
+        </div>
 
-    <div class="container">
+    </section>
+
+    <div class="container-calculo">
         <div class="caixaCalculo">
             <div>
-                <p>Inserir a data de nascimento ANTERIOR</p>
+                <p class="texto-interno-calculo">Inserir a data de nascimento ANTERIOR</p>
                 <input type="date" id="start">
                 <button>Calcular Data</button>
                 <br>
             </div>
             <div class="dataCorreta">
-                <p>Data Correta é: </p>
-                <span class="teste"></span>
-                <span></span>
+                <p class="texto-interno-calculo">Data Correta é: </p>
+                <div id="resAnt"></div>
             </div>
         </div>
 
         <div class="caixaCalculo">
             <div>
-                <p>Inserir a data de nascimento POSTERIOR</p>
-                <input type="date" id="start">
-                <button>Calcular Data</button>
+                <p class="texto-interno-calculo">Inserir a data de nascimento POSTERIOR</p>
+                <input type="date" id="startPosterior">
+                <button id="button2">Calcular Data</button>
                 <br>
             </div>
             <div class="dataCorreta">
-                <p>Data Correta é: </p>
-                <span class="teste"></span>
-                <span></span>
+                <p class="texto-interno-calculo">Data Correta é: </p>
+                <div id="resPos"></div>
             </div>
         </div>
     </div>
+
     <footer>
         <div class="container-social">
             <ul>
-                <li class="rodape-list"><a href="www.facebook.com/gabrielradtke"><i class="fab fa-facebook"
+                <li class="rodape-list"><a href="http://www.facebook.com/gabrielradtke"><i class="fab fa-facebook"
                             aria-hidden="true"></i></a></li>
-                <li class="rodape-list"><a href="www.twitter.com/gabrielradtke"><i class="fab fa-twitter"
+                <li class="rodape-list"><a href="http://www.twitter.com/gabrielradtke"><i class="fab fa-twitter"
                             aria-hidden="true"></i></a></li>
-                <li class="rodape-list"><a href="www.linkedin.com/gabrielradtke"><i class="fab fa-linkedin"
+                <li class="rodape-list"><a href="https://www.linkedin.com/in/gabrielradtke/"><i class="fab fa-linkedin"
                             aria-hidden="true"></i></a></li>
-                <li class="rodape-list"><a href="www.github.com/gabrielradtke"><i class="fab fa-github"
+                <li class="rodape-list"><a href="http://www.github.com/gabrielradtke"><i class="fab fa-github"
                             aria-hidden="true"></i></a></li>
-                <li class="rodape-list"><a href="www.instagram.com/gabrielradtke"><i class="fab fa-instagram"
+                <li class="rodape-list"><a href="http://www.instagram.com/gabrielradtke"><i class="fab fa-instagram"
                             aria-hidden="true"></i></a></li>
             </ul>
+        </div>
+        <div class="nome-dev">
+            <h4>Desenvolvido por Gabriel Radtke</h4>
         </div>
         </div>
     </footer>
