@@ -7,16 +7,110 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
     <script src="https://kit.fontawesome.com/50f803a4dc.js" crossorigin="anonymous"></script>
-    <title>CONTATOS</title>
+    <title>SOBRE</title>
 </head>
 
 <body>
-    <section class="section-manutencao">
-        <div class="div-manutencao">
-            <p class="p-manutencao">
-                ESTA PÁGINA ESTÁ EM MANUTENÇÃO
-            </p>
-            <a href="index.html">Retorne para página principal</a>
-        </nav>
+    <header>
+
+        <input type="checkbox" id="bt_menu">
+        <label for="bt_menu">&#9776;</label>
+
+        <div class="center">
+            <div class="logo"><img src="/imagens/Logo-ABCCC.png"></a></div>
+            <nav class="nav-bar">
+                <ul class="list-topo">
+                    <li class="header-topo"><a href="index.html">HOME</a></li>
+                    <li class="header-topo"><a href="faq.html">SOBRE</a></li>
+                </ul>
+            </nav>
+
+            <span class="btn-menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </span>
+
+        </div>
+    </header>
+
+
+    <section class="section-form js--section-contact" id="contato">
+        <div>
+            <h2>Gostou do conteúdo? Fico feliz em ouvir você</h2>
+        </div>
+
+        <form method="post" action="#" class="contact-form">
+            <div class="row">
+                <div class="col span-1-of-3">
+                    <label for="name">Nome</label>
+                </div>
+                <div class="col span-2-of-3">
+                    <input type="text" name="name" id="name" placeholder="Seu nome" required>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col span-1-of-3">
+                    <label for="email">Email</label>
+                </div>
+                <div class="col span-2-of-3">
+                    <input type="email" name="email" id="email" placeholder="Seu email" required>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col span-1-of-3">
+                    <label>Como você nos achou?</label>
+                </div>
+                <div class="col span-2-of-3">
+                    <select name="find-us">
+                        <option value="indicacao" selected>Indicação</option>
+                        <option value="pesquisa">Busca Internet</option>
+                        <option value="redesocial">Redes Sociais</option>
+                        <option value="outros">Outros</option>
+                    </select>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col span-1-of-3">
+                    <label>Nos deixe uma mensagem</label>
+                </div>
+                <div class="col span-2-of-3">
+                    <textarea name="message" id="message" placeholder="Digite sua mensagem"></textarea>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col span-1-of-3">
+                    <label>&nbsp;</label>
+                </div>
+                <div class="col span-2-of-3">
+                    <input type="submit" value="  Enviar  " class="btn btn-full">
+                </div>
+            </div>
+
+        </form>
+
     </section>
+
+    <footer>
+        <div>
+            <p class="p-footer">Gabriel Radtke &copy; 2021</p>
+        </div>
+        <div class="social-icons">
+            <ul class="social-links">
+                <li><a target='_blank' href="http://www.facebook.com/gabrielradtke"><i class="fab fa-facebook"
+                            aria-hidden="true"></i></a></li>
+                <li><a target='_blank' href="http://www.twitter.com/gabrielradtke"><i class="fab fa-twitter"
+                            aria-hidden="true"></i></a></li>
+                <li><a target='_blank' href="https://www.linkedin.com/in/gabrielradtke/"><i class="fab fa-linkedin"
+                            aria-hidden="true"></i></a></li>
+                <li><a target='_blank' href="http://www.github.com/gabrielradtke"><i class="fab fa-github"
+                            aria-hidden="true"></i></a></li>
+                <li><a href="http://www.instagram.com/gabrielradtke"><i class="fab fa-instagram"
+                            aria-hidden="true"></i></a></li>
+            </ul>
+        </div>
+    </footer>
 </body>
