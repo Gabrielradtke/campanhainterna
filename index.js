@@ -6,12 +6,12 @@ const divAnt = document.querySelector('#resAnt')
 function calcularDataAnterior() {
     let start = pegarData.value
     novostart = new Date(start)
-    
+
     let ndt = novostart
     resultado = ndt.setDate(novostart.getDate() - 310)
-    
+
     resultadoData = new Date(resultado)
-    
+
     return resultadoData
 }
 
@@ -29,7 +29,7 @@ const pegarDataPosterior = document.querySelector('#startPosterior')
 const button2 = document.querySelector('#button2')
 const divPos = document.querySelector('#resPos')
 
-function calcularDataPosterior(){
+function calcularDataPosterior() {
     let startPosterior = pegarDataPosterior.value
     novostartPosterior = new Date(startPosterior)
 

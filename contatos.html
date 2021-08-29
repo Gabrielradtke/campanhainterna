@@ -7,7 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
     <script src="https://kit.fontawesome.com/50f803a4dc.js" crossorigin="anonymous"></script>
-    <title>SOBRE</title>
+    <title>CONTATOS</title>
 </head>
 
 <body>
@@ -21,7 +21,8 @@
             <nav class="nav-bar">
                 <ul class="list-topo">
                     <li class="header-topo"><a href="index.html">HOME</a></li>
-                    <li class="header-topo"><a href="faq.html">SOBRE</a></li>
+                    <li class="header-topo"><a href="faq.html">FAQ</a></li>
+                    <li class="header-topo"><a href="https://gabrielradtke.netlify.app/index.html">SOBRE</a></li>
                 </ul>
             </nav>
 
@@ -40,7 +41,10 @@
             <h2>Gostou do conteúdo? Fico feliz em ouvir você</h2>
         </div>
 
-        <form method="post" action="#" class="contact-form">
+        <form action="https://formsubmit.co/gabriel_radtke@hotmail.com" method="post" class="contact-form">
+            <input type="hidden" name="_next" value="https://campanhainterna.netlify.app/">
+            <input type="hidden" name="_captcha" value="false">
+
             <div class="row">
                 <div class="col span-1-of-3">
                     <label for="name">Nome</label>
@@ -55,7 +59,7 @@
                     <label for="email">Email</label>
                 </div>
                 <div class="col span-2-of-3">
-                    <input type="email" name="email" id="email" placeholder="Seu email" required>
+                    <input type="text" name="email" id="email" placeholder="Seu email" required>
                 </div>
             </div>
 
