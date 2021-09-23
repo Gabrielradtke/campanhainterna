@@ -41,7 +41,7 @@ header {
   height: 8.5vh;
 }
 
-.nav-bar .list-topo{
+.nav-bar .list-topo {
   height: 7.5vh;
   align-items: center;
   text-align: center;
@@ -85,6 +85,7 @@ header ul li a img {
   align-items: center;
   margin-top: -40px;
 }
+
 /* Final Header */
 
 /* MENU RESPONSIVO */
@@ -107,15 +108,15 @@ label[for="bt_menu"] {
 label[for="bt_menu"] {
   display: none;
 }
+
 /* FIM MENU MOBILE */
 
 /* TEXTO INICIO */
 section {
-  margin-top: 20px;
+  margin-bottom: 10px;
   margin-left: 110px;
   margin-right: 110px;
   position: relative;
-  height: 30vh;
   justify-content: center;
 }
 
@@ -125,16 +126,17 @@ h2 {
 }
 
 .text-inicio {
-  border-radius: 15px;
+  border-radius:10px;
   text-align: justify;
   background-color: darkgray;
   -webkit-box-shadow: 0 5px 20px 0 rgba(0, 0, 0, 4);
   box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.2), 0 5px 5px 0 rgba(0, 0, 0, 0.24);
 }
 
+
 /* INICIO PAGINA MANUTENÇAO */
 
-.section-manutencao{
+.section-manutencao {
   width: auto;
   text-align: center;
   height: 600px;
@@ -144,7 +146,7 @@ h2 {
   width: 100%;
 }
 
-.p-manutencao{
+.p-manutencao {
   width: 100%;
 }
 
@@ -161,7 +163,8 @@ div.container-calculo {
   align-items: center;
 }
 
-.caixaCalculo, .caixaCalculo2{
+.caixaCalculo,
+.caixaCalculo2 {
   width: 50%;
   height: 30vh;
   position: relative;
@@ -180,7 +183,7 @@ div.container-calculo {
   padding: 20px 40px 10px;
 }
 
-.texto-interno-calculo{
+.texto-interno-calculo {
   color: #000000;
   padding: 10px 10px 10px;
   width: 100%;
@@ -242,7 +245,6 @@ input {
 }
 
 /* FOOTER  */
-
 footer {
   width: 100%;
   position: absolute;
@@ -257,7 +259,6 @@ footer .p-footer {
   color: #666666;
   font-size: 80%;
 }
-
 
 .social-links {
   margin: 10px auto;
@@ -290,8 +291,9 @@ footer .p-footer {
   color: #ff5582;
 }
 
+
+/* MEDIAS QUERIES */
 @media screen and (max-width: 860px) {
-  
   header .center {
     display: block;
     width: 100%;
@@ -305,31 +307,29 @@ footer .p-footer {
     transition: all 0.4s;
     align-items: center;
   }
-  
-  
+
   .center .nav-bar {
     display: block;
     width: 100%;
   }
-  
+
   .center .list-topo {
     align-items: center;
     width: 100%;
     height: 178px;
   }
-  
-  
-  .nav-bar .list-topo .header-topo{
+
+  .nav-bar .list-topo .header-topo {
     position: relative;
     display: block;
     width: 100%;
     text-align: center;
   }
-  
-  .header-topo a{
+
+  .header-topo a {
     background-color: #666666;
   }
-  
+
   .center .logo {
     display: none;
   }
@@ -353,7 +353,7 @@ footer .p-footer {
   #bt_menu:checked~.center {
     margin-left: 0px;
   }
-  
+
   section {
     display: inline;
     align-items: center;
@@ -367,7 +367,7 @@ footer .p-footer {
     margin-right: 10px;
   }
 
-  .container-calculo{
+  .container-calculo {
     display: block;
     flex-wrap: wrap;
   }
@@ -381,8 +381,9 @@ footer .p-footer {
     height: auto;
   }
 
-  footer {
-    margin-top: 30px;
+  footer{
+    position: relative;
+    bottom: 0px;
     width: 100%;
     align-content: center;
     align-items: center;
@@ -408,8 +409,6 @@ footer .p-footer {
   letter-spacing: 1px;
   word-spacing: -2px;
 }
-
-
 
 .section-form h2:after {
   content: " ";
@@ -460,19 +459,21 @@ input[type=submit] {
   border-radius: 200px;
 }
 
-/* PAGINA FAQ */
+
+/* ****** PAGINA FAQ ****** */
 .accordion {
   margin-top: 80px;
   margin-left: auto;
   margin-right: auto;
-  max-width:  680px;
+  max-width: 680px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
   border-radius: 5px;
   overflow: hidden;
   background: #FAA831;
 }
 
-.accordion_label, .accordion_content {
+.accordion_label,
+.accordion_content {
   padding: 14px 20px;
 }
 
@@ -485,11 +486,11 @@ input[type=submit] {
   transition: background 0.1s;
 }
 
-.accordion_label:hover{
+.accordion_label:hover {
   background: #ffffff;
 }
 
-.accordion_label::after{
+.accordion_label::after {
   content: "";
   position: absolute;
   top: 50%;
@@ -497,15 +498,17 @@ input[type=submit] {
   right: 20px;
   width: 12px;
   height: 8px;
-  background-image: url('data:image/svg+xml;utf8,<svg width="100" height="50" xmlns="http://www.w3.org/2000/svg"><polygon points="0,0 100,0 50,50" style="fill:%23FFFFFF99;" /></svg>');;
+  background-image: url('data:image/svg+xml;utf8,<svg width="100" height="50" xmlns="http://www.w3.org/2000/svg"><polygon points="0,0 100,0 50,50" style="fill:%23FFFFFF99;" /></svg>');
+  ;
   background-size: contain;
   transition: transform 0.4s;
 }
 
-.accordion_p{
+.accordion_p {
   background-color: #FAA831;
   color: #f2f2f2;
 }
+
 .accordion_content {
   background: #FAA831;
   line-height: 1.6;
@@ -517,11 +520,10 @@ input[type=submit] {
   display: none;
 }
 
-.accordion_input:checked ~ .accordion_content {
+.accordion_input:checked~.accordion_content {
   display: block;
 }
 
-.accordion_input:checked ~ .accordion_label::after {
+.accordion_input:checked~.accordion_label::after {
   transform: translateY(-50%) rotate(0.5turn);
 }
-
