@@ -1,4 +1,1 @@
-# gaio
-# gaio
-# gaio
-# gaio
+Projeto calculo intervalo entre partos Cavalo Crioulo.
