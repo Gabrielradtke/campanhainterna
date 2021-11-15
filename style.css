@@ -88,29 +88,6 @@ header ul li a img {
 
 /* Final Header */
 
-/* MENU RESPONSIVO */
-label[for="bt_menu"] {
-  padding: 5px;
-  background-color: #666666;
-  border-radius: 10%;
-  color: #262626;
-  text-align: center;
-  font-size: 30px;
-  cursor: pointer;
-  width: 50px;
-  height: 50px;
-}
-
-#bt_menu {
-  display: none;
-}
-
-label[for="bt_menu"] {
-  display: none;
-}
-
-/* FIM MENU MOBILE */
-
 /* TEXTO INICIO */
 section {
   margin-bottom: 10px;
@@ -126,13 +103,28 @@ h2 {
 }
 
 .text-inicio {
-  border-radius:10px;
+  border-radius: 60px;
   text-align: justify;
   background-color: darkgray;
-  -webkit-box-shadow: 0 5px 20px 0 rgba(0, 0, 0, 4);
+  -webkit-box-shadow: 0 5px 5px 0 rgba(0, 0, 0, 4);
   box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.2), 0 5px 5px 0 rgba(0, 0, 0, 0.24);
 }
 
+/* INICIO PAGINA MANUTENÇAO */
+
+.section-manutencao {
+  width: auto;
+  text-align: center;
+  height: 600px;
+}
+
+.div-manutencao {
+  width: 100%;
+}
+
+.p-manutencao {
+  width: 100%;
+}
 
 /* CAIXAS DE CALCULOS */
 
@@ -155,11 +147,9 @@ div.container-calculo {
   z-index: 1;
   background: #FFFFFF;
   max-width: 330px;
-  margin: 10px 10px 2px 0px;
+  margin: 10px 10px 2px;
   padding: 25px;
   text-align: center;
-  align-items: center;
-  box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.2), 0 5px 5px 0 rgba(0, 0, 0, 0.24);
 }
 
 
@@ -170,7 +160,7 @@ div.container-calculo {
 
 .texto-interno-calculo {
   color: #000000;
-  padding: 10px 10px 10px 10px;
+  padding: 10px 10px 10px;
   width: 100%;
 }
 
@@ -223,21 +213,18 @@ input {
   outline: 0;
   background: #f2f2f2;
   border: 0;
-  margin: 0px 0px 5px 0px ;
-  padding: 1px;
+  margin: 0 0 5px;
+  padding: 2px;
   box-sizing: border-box;
   font-size: 14px;
-  align-items: center;
-  text-align: center;
-  width: 80%;
 }
 
 /* FOOTER  */
 footer {
   width: 100%;
-  position: absolute;
+  position: flex;
   bottom: 0px;
-  padding: 8px 0px;
+  padding: 0px 0px;
   margin-top: 10px;
 }
 
@@ -270,7 +257,6 @@ footer .p-footer {
 .social-links li a:visited {
   text-decoration: none;
   border: 0;
-  color: #ff0044;
   transition: color 0.3s;
 }
 
@@ -281,7 +267,7 @@ footer .p-footer {
 
 
 /* MEDIAS QUERIES */
-@media screen and (max-width: 860px) {
+@media screen and (max-width: 660px) {
   header .center {
     display: block;
     width: 100%;
@@ -291,7 +277,6 @@ footer .p-footer {
   .center {
     display: block;
     width: 100%;
-    margin-left: -800px;
     transition: all 0.4s;
     align-items: center;
   }
@@ -332,16 +317,6 @@ footer .p-footer {
     background-color: #666666;
   }
 
-
-
-  label[for="bt_menu"] {
-    display: block;
-  }
-
-  #bt_menu:checked~.center {
-    margin-left: 0px;
-  }
-
   section {
     display: inline;
     align-items: center;
@@ -369,9 +344,8 @@ footer .p-footer {
     height: auto;
   }
 
-  footer{
-    position: relative;
-    bottom: 0px;
+  footer {
+    /* margin-top: 30px; */
     width: 100%;
     align-content: center;
     align-items: center;
