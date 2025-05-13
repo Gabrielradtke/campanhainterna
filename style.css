@@ -4,7 +4,7 @@
   border: 0;
   font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
   background-color: #ffffff;
-  color: #FAA831;
+  color: #0B5261;
 }
 
 /* INICIO MENU SUPERIOR  */
@@ -63,7 +63,7 @@ header {
 header ul li a {
   padding: 10%;
   text-decoration: none;
-  color: #FAA831;
+  color: #0B5261;
   float: right;
   width: 100%;
   padding: 15px;
@@ -165,13 +165,13 @@ div.container-calculo {
 }
 
 #resPos {
-  color: #FAA831;
+  color: #0B5261;
   width: 100%;
   font-size: larger;
 }
 
 #resAnt {
-  color: #FAA831;
+  color: #0B5261;
   width: 100%;
   font-size: larger;
 }
@@ -376,7 +376,7 @@ footer .p-footer {
   content: " ";
   display: block;
   height: 2px;
-  background-color: #FAA831;
+  background-color: #0B5261;
   width: 100px;
   margin: 0 auto;
   margin-top: 30px;
@@ -431,7 +431,7 @@ input[type=submit] {
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
   border-radius: 5px;
   overflow: hidden;
-  background: #FAA831;
+  background: #0B5261;
 }
 
 .accordion_label,
@@ -441,7 +441,7 @@ input[type=submit] {
 
 .accordion_label {
   display: block;
-  color: #FAA831;
+  color: #0B5261;
   font-weight: 500;
   cursor: pointer;
   position: relative;
@@ -467,12 +467,12 @@ input[type=submit] {
 }
 
 .accordion_p {
-  background-color: #FAA831;
+  background-color: #0B5261;
   color: #f2f2f2;
 }
 
 .accordion_content {
-  background: #FAA831;
+  background: #0B5261;
   line-height: 1.6;
   font-size: 0.85em;
   display: none;
