@@ -2,91 +2,86 @@
 <html lang="pt-br">
 
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
-    <link rel="shortcut icon" href="imagens/faviconLogoNovo.ico" type="image/x-icon">
-    <script src="https://kit.fontawesome.com/50f803a4dc.js" crossorigin="anonymous"></script>
-    <title>PÁGINA PRINCIPAL</title>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+  <link rel="shortcut icon" href="imagens/faviconLogoNovo.ico" type="image/x-icon">
+  <script src="https://kit.fontawesome.com/50f803a4dc.js" crossorigin="anonymous"></script>
+  <title>PÁGINA PRINCIPAL</title>
 </head>
 
 <body>
-    <header>
+  <header>
+    <div class="center">
+      <div class="logo"><img src="/INTERVALO ENTRE PARTOS/IMAGENS/logo.png" alt="Logo"></div>
 
-        <div class="center">
-            <div class="logo"><img src="/campanhainterna/img/logo.png"></a></div>
-            <nav class="nav-bar">
-                <ul class="list-topo">
-                    <li class="header-topo"><a href="https://gabrielradtke.netlify.app/index.html">SOBRE</a></li>
-                    <li class="header-topo"><a href="faq.html">FAQ</a></li>
-                    <li class="header-topo"><a href="contatos.html">CONTATOS</a></li>
-                </ul>
-            </nav>
+      <nav class="nav-bar">
+        <div class="hamburger" id="hamburger">
+          <i class="fas fa-bars"></i>
         </div>
-    </header>
+        <ul class="list-topo" id="nav-links">
+          <li class="header-topo"><a href="https://gabrielradtke.netlify.app/index.html">SOBRE</a></li>
+          <li class="header-topo"><a href="faq.html">FAQ</a></li>
+          <li class="header-topo"><a href="contatos.html">CONTATOS</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
 
-    <section>
-        
-        <div class="text-inicio">
-        <h2> INTERVALO ENTRE PARTOS </h2>
-        <p class="text-interno-inicio"> Conforme regulamento do Serviço Genealógico da ABCCC disposto no Art. 50, não serão inscritos produtos que
-            venham a nascer com período de gestação inferior a 310 (trezentos e
-            dez) e superior a 365 (trezentos e sessenta e cinco) dias. Com isso as tabelas abaixo possuem a intenção de
-            auxíliar de forma simples e rápido no cálculo correto.
-        </p>
-        <p class="text-interno-inicio">Este projeto foi Desenvolvido de forma independente.</p>
-        </div>
+  <section>
+    <div class="text-inicio">
+      <h2> INTERVALO ENTRE PARTOS </h2>
+      <p class="text-interno-inicio">
+        Conforme regulamento do Serviço Genealógico da ABCCC disposto no Art. 50, não serão inscritos produtos que
+        venham a nascer com período de gestação inferior a 310 (trezentos e dez) e superior a 365 (trezentos e sessenta e cinco) dias.
+        Com isso as tabelas abaixo possuem a intenção de auxíliar de forma simples e rápida no cálculo correto.
+      </p>
+      <p class="text-interno-inicio">Este projeto foi desenvolvido de forma independente.</p>
+    </div>
+  </section>
 
-    </section>
-
-    <div class="container-calculo">
-        <div class="caixaCalculo">
-            <div>
-                <p class="texto-interno-calculo">Inserir a data de nascimento ANTERIOR</p>
-                <input type="date" id="start">
-                <button>Calcular Data</button>
-                <br>
-            </div>
-            <div class="dataCorreta">
-                <p class="texto-interno-calculo">Data Correta é: </p>
-                <div id="resAnt"></div>
-            </div>
-        </div>
-
-        <div class="caixaCalculo">
-            <div>
-                <p class="texto-interno-calculo">Inserir a data de nascimento POSTERIOR</p>
-                <input type="date" id="startPosterior">
-                <button id="button2">Calcular Data</button>
-                <br>
-            </div>
-            <div class="dataCorreta">
-                <p class="texto-interno-calculo">Data Correta é: </p>
-                <div id="resPos"></div>
-            </div>
-        </div>
+  <div class="container-calculo">
+    <div class="caixaCalculo">
+      <p class="texto-interno-calculo">Inserir a data de nascimento ANTERIOR</p>
+      <input type="date" id="start">
+      <button>Calcular Data</button>
+      <div class="dataCorreta">
+        <p class="texto-interno-calculo">Data Correta é:</p>
+        <div id="resAnt"></div>
+      </div>
     </div>
 
-    <footer>
-        <div>
-            <p class="p-footer">Gabriel Radtke &copy; 2021</p>
-        </div>
-        <div class="social-icons">
-            <ul class="social-links">
-                <li><a target='_blank' href="http://www.facebook.com/gabrielradtke"><i class="fab fa-facebook"
-                            aria-hidden="true"></i></a></li>
-                <li><a target='_blank' href="http://www.twitter.com/gabrielradtke"><i class="fab fa-twitter"
-                            aria-hidden="true"></i></a></li>
-                <li><a target='_blank' href="https://www.linkedin.com/in/gabrielradtke/"><i class="fab fa-linkedin"
-                            aria-hidden="true"></i></a></li>
-                <li><a target='_blank' href="http://www.github.com/gabrielradtke"><i class="fab fa-github"
-                            aria-hidden="true"></i></a></li>
-                <li><a href="http://www.instagram.com/gabrielradtke"><i class="fab fa-instagram"
-                            aria-hidden="true"></i></a></li>
-            </ul>
-        </div>
+    <div class="caixaCalculo">
+      <p class="texto-interno-calculo">Inserir a data de nascimento POSTERIOR</p>
+      <input type="date" id="startPosterior">
+      <button id="button2">Calcular Data</button>
+      <div class="dataCorreta">
+        <p class="texto-interno-calculo">Data Correta é:</p>
+        <div id="resPos"></div>
+      </div>
+    </div>
+  </div>
 
-    </footer>
-    <script src="index.js"></script>
+  <footer>
+    <p class="p-footer">Gabriel Radtke &copy; 2021</p>
+    <ul class="social-links">
+      <li><a href="http://www.facebook.com/gabrielradtke" target="_blank"><i class="fab fa-facebook"></i></a></li>
+      <li><a href="http://www.twitter.com/gabrielradtke" target="_blank"><i class="fab fa-twitter"></i></a></li>
+      <li><a href="https://www.linkedin.com/in/gabrielradtke/" target="_blank"><i class="fab fa-linkedin"></i></a></li>
+      <li><a href="http://www.github.com/gabrielradtke" target="_blank"><i class="fab fa-github"></i></a></li>
+      <li><a href="http://www.instagram.com/gabrielradtke" target="_blank"><i class="fab fa-instagram"></i></a></li>
+    </ul>
+  </footer>
+
+  <script>
+    const hamburger = document.getElementById('hamburger');
+    const navLinks = document.getElementById('nav-links');
+
+    hamburger.addEventListener('click', () => {
+      navLinks.classList.toggle('active');
+    });
+  </script>
+  <script src="index.js"></script>
 </body>
+</html>
