@@ -72,6 +72,11 @@ section {
   padding: 15px;
   text-align: justify;
 }
+h2 {
+  justify-content: center;
+  text-align: center;
+  padding: 5px;
+}
 
 /* CALCULO */
 .container-calculo {
@@ -94,7 +99,7 @@ section {
 input {
   background: #f2f2f2;
   margin-bottom: 5px;
-  padding: 6px;
+  padding-top: 10px;
   font-size: 14px;
   width: 100%;
 }
@@ -107,6 +112,10 @@ button {
   font-size: 12px;
   cursor: pointer;
   transition: 0.3s;
+}
+
+.dataCorreta{
+  padding: 6px;
 }
 
 button:hover {
@@ -175,4 +184,68 @@ footer {
     flex-wrap: wrap;
     gap: 10px;
   }
+}
+
+/* FAQ */
+
+.faq-section {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.faq-title {
+  text-align: center;
+  font-size: 28px;
+  margin-bottom: 20px;
+}
+
+.accordion_faq {
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.accordion > div {
+  border-bottom: 1px solid #ccc;
+}
+
+.accordion_input {
+  display: none;
+}
+
+.accordion_label {
+  display: block;
+  padding: 15px 20px;
+  background-color: #f7f7f7;
+  cursor: pointer;
+  font-weight: bold;
+  transition: background-color 0.3s;
+}
+
+.accordion_label:hover {
+  background-color: #e0e0e0;
+}
+
+.accordion_content {
+  max-height: 0;
+  overflow: hidden;
+  padding: 0 20px;
+  background-color: #fff;
+  transition: max-height 0.3s ease, padding 0.3s ease;
+}
+
+.accordion_input:checked ~ .accordion_label {
+  background-color: #dfefff;
+}
+
+.accordion_input:checked ~ .accordion_content {
+  max-height: 200px; /* ajuste conforme o conteúdo */
+  padding: 15px 20px;
+}
+
+.accordion_p {
+  margin: 0;
+  font-size: 16px;
+  line-height: 1.5;
 }
