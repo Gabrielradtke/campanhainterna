@@ -41,6 +41,7 @@ function calcularDataPosterior() {
     return resultadoDataPosterior
 }
 
+
 const dataFormatadaPosterior = calcularDataPosterior();
 const formatter2 = Intl.DateTimeFormat('pt-BR', {
     dataStyle: 'short',
@@ -50,4 +51,17 @@ button2.addEventListener('click', () => {
     divPos.innerHTML = formatter2.format(calcularDataPosterior());
 });
 
-// Pagina FAQ
+// Data em tempo real
+
+function atualizarDataHora() {
+    const agora = new Date();
+    const opcoes = {
+      weekday: 'long', year: 'numeric', month: 'long',
+      day: 'numeric', hour: '2-digit', minute: '2-digit', second: '2-digit'
+    };
+    const formatado = agora.toLocaleDateString('pt-BR', opcoes);
+    document.getElementById('data-hora').textContent = formatado;
+  }
+  
+  setInterval(atualizarDataHora, 1000); // Atualiza a cada segundo
+  atualizarDataHora(); // Atualiza imediatamente ao carregar
