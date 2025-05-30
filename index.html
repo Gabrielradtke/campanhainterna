@@ -1,75 +1,98 @@
-
-<!DOCTYPE html>
-<html lang="pt-br">
+<!DOCTYPE html> <!-- Define o tipo de documento como HTML5 -->
+<html lang="pt-br"> <!-- Define o idioma da página como português brasileiro -->
 
 <head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="style.css">
-  <link rel="shortcut icon" href="imagens/faviconLogoNovo.ico" type="image/x-icon">
-  <script src="https://kit.fontawesome.com/50f803a4dc.js" crossorigin="anonymous"></script>
-  <title>INTERVALO ENTRE PARTOS</title>
+  <meta charset="UTF-8"> <!-- Define a codificação de caracteres como UTF-8 -->
+  <meta http-equiv="X-UA-Compatible" content="IE=edge"> <!-- Compatibilidade com Internet Explorer -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- Responsividade para dispositivos móveis -->
+  <link rel="stylesheet" href="style.css"> <!-- Link para o arquivo de estilo CSS -->
+  <link rel="shortcut icon" href="imagens/faviconLogoNovo.ico" type="image/x-icon"> <!-- Ícone da aba do navegador -->
+  <script src="https://kit.fontawesome.com/50f803a4dc.js" crossorigin="anonymous"></script> <!-- Ícones da Font Awesome -->
+  <title>INTERVALO ENTRE PARTOS</title> <!-- Título da página exibido na aba do navegador -->
 </head>
 
 <body>
+  <!-- Início do cabeçalho -->
   <header>
-    <div class="center">
-      <div class="logo"><img src="/imagens/logo.png" alt="Logo"><a href="https://intervaloentrepartos.netlify.app/"></a></div>
-
-      <nav class="nav-bar">
-        <div class="hamburger" id="hamburger">
-          <i class="fas fa-bars"></i>
+    <header>
+        <div class="center">
+          <!-- Logo clicável -->
+          <a href="https://intervaloentrepartos.netlify.app/" class="logo">
+            <img src="/imagens/logo.png" alt="Logo">
+          </a>
+      
+          <!-- Navegação -->
+          <nav class="nav-bar">
+            <!-- Ícone de menu hambúrguer (visível apenas em telas pequenas) -->
+            <div class="hamburger" id="hamburger">
+              <i class="fas fa-bars"></i>
+            </div>
+      
+            <!-- Links do menu -->
+            <ul class="list-topo" id="nav-links">
+              <li class="header-topo"><a href="https://gabrielradtke.netlify.app/">SOBRE</a></li>
+              <li class="header-topo"><a href="faq.html">FAQ</a></li>
+              <li class="header-topo"><a href="https://gabrielradtke.netlify.app/">CONTATOS</a></li>
+            </ul>
+          </nav>
         </div>
-        <ul class="list-topo" id="nav-links">
-          <li class="header-topo"><a href="https://gabrielradtke.netlify.app//">SOBRE</a></li>
-          <li class="header-topo"><a href="faq.html">FAQ</a></li>
-          <li class="header-topo"><a href="https://gabrielradtke.netlify.app/">CONTATOS</a></li>
-        </ul>
-      </nav>
-    </div>
-  </header>
-
+      </header>
+      
+  <!-- Seção principal -->
   <section>
     <div class="text-inicio">
-      <h2> INTERVALO ENTRE PARTOS </h2>
+      <h2>INTERVALO ENTRE PARTOS</h2> <!-- Título da página -->
+
+      <!-- Parágrafos com informações -->
       <p class="text-interno-inicio">
         Conforme regulamento do Serviço Genealógico da ABCCC disposto no Art. 50, não serão inscritos produtos que
         venham a nascer com período de gestação inferior a 310 (trezentos e dez) e superior a 365 (trezentos e sessenta e cinco) dias.
-        Com isso as tabelas abaixo possuem a intenção de auxíliar de forma simples e rápida no cálculo correto.
       </p>
+
+      <p class="text-interno-inicio2">
+        Com isso as tabelas abaixo possuem a intenção de auxiliar de forma simples e rápida no cálculo correto.
+      </p>
+
       <br>
-      <p class="text-interno-inicio">Este projeto foi desenvolvido de forma independente como forma de estudo sobre programação.</p>
+
+      <!-- Container dos dois blocos de cálculo -->
+      <div class="container-calculo">
+        
+        <!-- Bloco de cálculo com data anterior -->
+        <div class="caixaCalculo">
+          <p class="texto-interno-calculo">Inserir a data de nascimento ANTERIOR</p>
+          <input type="date" id="start"> <!-- Campo de entrada de data -->
+          <button>Calcular Data</button> <!-- Botão de cálculo -->
+          <div class="dataCorreta">
+            <p class="texto-interno-calculo">Data Correta é:</p>
+            <div id="resAnt"></div> <!-- Resultado exibido aqui -->
+          </div>
+        </div>
+
+        <!-- Bloco de cálculo com data posterior -->
+        <div class="caixaCalculo">
+          <p class="texto-interno-calculo">Inserir a data de nascimento POSTERIOR</p>
+          <input type="date" id="startPosterior"> <!-- Campo de entrada de data -->
+          <button id="button2">Calcular Data</button> <!-- Botão de cálculo -->
+          <div class="dataCorreta">
+            <p class="texto-interno-calculo">Data Correta é:</p>
+            <div id="resPos"></div> <!-- Resultado exibido aqui -->
+          </div>
+        </div>
+      </div>
+
+      <p class="text-interno-inicio">
+        Este projeto foi desenvolvido de forma independente como forma de estudo sobre programação.
+      </p>
     </div>
   </section>
 
-  <div class="container-calculo">
-    <div class="caixaCalculo">
-      <p class="texto-interno-calculo">Inserir a data de nascimento ANTERIOR</p>
-      <input type="date" id="start">
-      <button>Calcular Data</button>
-      <div class="dataCorreta">
-        <p class="texto-interno-calculo">Data Correta é:</p>
-        <div id="resAnt"></div>
-      </div>
-    </div>
-
-    <div class="caixaCalculo">
-      <p class="texto-interno-calculo">Inserir a data de nascimento POSTERIOR</p>
-      <input type="date" id="startPosterior">
-      <button id="button2">Calcular Data</button>
-      <div class="dataCorreta">
-        <p class="texto-interno-calculo">Data Correta é:</p>
-        <div id="resPos"></div>
-      </div>
-    </div>
-  </div>
-
+  <!-- Rodapé da página -->
   <footer>
-    <div id="data-hora"></div>
+    <div id="data-hora"></div> <!-- Local onde será exibido data/hora via JS -->
     <br>
-    <p class="p-footer">Gabriel Radtke &copy; 2025</p>
-    <ul class="social-links">
+    <p class="p-footer">Gabriel Radtke &copy; 2025</p> <!-- Nome e ano -->
+    <ul class="social-links"> <!-- Links para redes sociais -->
       <li><a href="http://www.facebook.com/gabrielradtke" target="_blank"><i class="fab fa-facebook"></i></a></li>
       <li><a href="http://www.twitter.com/gabrielradtke" target="_blank"><i class="fab fa-twitter"></i></a></li>
       <li><a href="https://www.linkedin.com/in/gabrielradtke/" target="_blank"><i class="fab fa-linkedin"></i></a></li>
@@ -78,14 +101,16 @@
     </ul>
   </footer>
 
+  <!-- Script do menu hambúrguer -->
   <script>
-    const hamburger = document.getElementById('hamburger');
-    const navLinks = document.getElementById('nav-links');
+    const hamburger = document.getElementById('hamburger'); // Seleciona o ícone hambúrguer
+    const navLinks = document.getElementById('nav-links'); // Seleciona os links do menu
 
     hamburger.addEventListener('click', () => {
-      navLinks.classList.toggle('active');
+      navLinks.classList.toggle('active'); // Alterna a visibilidade dos links no mobile
     });
   </script>
-  <script src="index.js"></script>
+
+  <script src="index.js"></script> <!-- Script JS externo -->
 </body>
 </html>
