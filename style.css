@@ -1,301 +1,512 @@
 /* Define estilos padrão para todos os elementos da página */
 * {
-  margin: 0; /* Remove margem externa padrão */
-  padding: 0; /* Remove preenchimento interno padrão */
-  border: 0; /* Remove bordas padrão */
-  box-sizing: border-box; /* Garante que padding e border sejam incluídos no tamanho total */
-  font-family: 'Lucida Sans', sans-serif; /* Define a fonte padrão */
-  background-color: #ffffff; /* Define a cor de fundo branca */
-  color: #0B5261; /* Define a cor do texto como azul escuro */
+  margin: 0;
+  /* Remove margem externa padrão */
+  padding: 0;
+  /* Remove preenchimento interno padrão */
+  border: 0;
+  /* Remove bordas padrão */
+  box-sizing: border-box;
+  /* Garante que padding e border sejam incluídos no tamanho total */
+  font-family: 'Lucida Sans', sans-serif;
+  /* Define a fonte padrão */
+  color: #0B5261;
+  /* Define a cor do texto como azul escuro */
 }
 
 /* Define altura mínima e estrutura do corpo da página */
 body {
-  min-height: 100vh; /* Altura mínima de 100% da viewport */
-  display: flex; /* Usa flexbox */
-  flex-direction: column; /* Organiza os filhos em coluna */
+  min-height: 100vh;
+  /* Altura mínima de 100% da viewport */
+  display: flex;
+  /* Usa flexbox */
+  flex-direction: column;
+  /* Organiza os filhos em coluna */
+  background-image: url(/imagens/unnamed.jpg);
+  background-size: cover;
+  z-index: -1;
 }
 
 /* Estilo do cabeçalho da página */
 header {
-  width: 100%; /* Largura total */
+  width: 100%;
+  /* Largura total */
 }
 
 /* Centraliza e organiza os elementos no cabeçalho */
 .center {
-  display: flex; /* Usa flexbox */
-  align-items: center; /* Alinha verticalmente ao centro */
-  height: 70px; /* Altura do cabeçalho */
-  flex-wrap: wrap; /* Permite quebra de linha */
-  justify-content: space-between; /* Espaço entre os itens */
+  display: flex;
+  /* Usa flexbox */
+  align-items: center;
+  /* Alinha verticalmente ao centro */
+  height: 80px;
+  /* Altura do cabeçalho */
+  flex-wrap: wrap;
+  /* Permite quebra de linha */
+  justify-content: space-between;
+  /* Espaço entre os itens */
 }
 
 /* Estilo da logo */
 .logo img {
-  margin-left: 80px; /* Espaço à esquerda */
-  max-height: 60px; /* Altura máxima da imagem */
-  max-width: 140px; /* Largura máxima da imagem */
+  margin-left: 80px;
+  /* Espaço à esquerda */
+  max-height: 60px;
+  /* Altura máxima da imagem */
+  max-width: 140px;
+  /* Largura máxima da imagem */
 }
 
-/* Estilo da barra de navegação */
+/* NAVBAR */
+
+/* Estilo da barra de navegação principal */
 .nav-bar {
-  display: flex;                /* Itens lado a lado */
-  align-items: center;          /* Centraliza verticalmente */
-  gap: 20px;                    /* Espaço entre os itens */
-  margin-right: 80px;           /* Distância da borda direita */
-  position: relative;           /* Para posicionamento interno relativo */
+  display: flex;
+  /* Itens lado a lado */
+  align-items: center;
+  /* Centraliza verticalmente */
+  gap: 20px;
+  /* Espaço entre os itens */
+  margin-right: 80px;
+  /* Distância da borda direita */
+  position: relative;
+  /* Para posicionamento interno relativo */
 }
 
 /* Ícone de menu hambúrguer (invisível no desktop) */
 .hamburger {
-  display: none;                /* Oculto por padrão (em telas grandes) */
-  font-size: 24px;              /* Tamanho do ícone */
-  cursor: pointer;              /* Cursor de mão ao passar */
-  padding: 10px;                /* Espaçamento interno */
+  display: none;
+  /* Oculto por padrão (em telas grandes) */
+  font-size: 24px;
+  /* Tamanho do ícone */
+  cursor: pointer;
+  /* Cursor de mão ao passar */
+  padding: 10px;
+  /* Espaçamento interno */
 }
 
-/* Lista de navegação */
+/* Lista de links do menu no topo */
 .list-topo {
-  display: flex;                /* Itens lado a lado */
-  list-style: none;            /* Remove marcadores da lista */
-  gap: 20px;                   /* Espaçamento entre links */
+  display: flex;
+  /* Itens lado a lado */
+  list-style: none;
+  /* Remove marcadores da lista */
+  gap: 20px;
+  /* Espaçamento entre links */
 }
 
 /* Links da navbar */
 .list-topo li a {
-  text-decoration: none;       /* Remove sublinhado */
-  font-weight: bold;           /* Deixa o texto em negrito */
-  transition: 0.3s;            /* Transição suave no hover */
+  text-decoration: none;
+  /* Remove sublinhado */
+  font-weight: bold;
+  /* Deixa o texto em negrito */
+  transition: 0.3s;
+  /* Transição suave no hover */
 }
 
 /* Efeito ao passar o mouse nos links */
 .list-topo li a:hover {
-  color: #000000;              /* Muda a cor do texto */
+  color: #000000;
+  /* Muda a cor do texto */
+}
+
+/* RESPONSIVIDADE DO MENU */
+@media screen and (max-width: 768px) {
+  .center {
+    flex-direction: column;
+    /* Empilha logo e menu verticalmente */
+    align-items: center;
+    /* Centraliza os itens */
+  }
+
+  .hamburger {
+    display: block;
+    /* Torna o hambúrguer visível */
+  }
+
+  .list-topo {
+    display: none;
+    /* Esconde o menu por padrão */
+    flex-direction: column;
+    /* Menu em coluna */
+    align-items: center;
+    /* Centraliza os links */
+    width: 100%;
+    /* Ocupa largura total */
+    margin-top: 10px;
+    /* Espaço acima do menu */
+  }
+
+  .list-topo.active {
+    display: flex;
+    /* Mostra o menu quando ativado */
+  }
 }
 
 /* Área principal da página */
 section {
-  margin: 20px 5%; /* Espaçamento externo */
-  padding: 10px; /* Espaçamento interno */
+  margin: 20px 5%;
+  /* Espaçamento externo */
+  padding: 10px;
+  /* Espaçamento interno */
 }
 
 /* Caixa de texto inicial */
 .text-inicio {
-  border: 3px solid rgba(0, 0, 0, 0.1); /* Borda sutil */
-  border-radius: 12px; /* Bordas arredondadas */
-  padding: 15px; /* Espaçamento interno */
-  text-align: justify; /* Alinhamento do texto */
+  border: 3px solid rgba(0, 0, 0, 0.1);
+  /* Borda sutil */
+  border-radius: 12px;
+  /* Bordas arredondadas */
+  padding: 15px;
+  /* Espaçamento interno */
+  text-align: justify;
+  /* Alinhamento do texto */
+  background-color: rgba(255, 255, 255, 0.3);
+  /* fundo branco com 30% de opacidade */
+  backdrop-filter: blur(6px);
+  /* aplica desfoque no que estiver atrás */
+  -webkit-backdrop-filter: blur(8px);
+  /* compatibilidade com Safari */
+  border-radius: 12px;
+  /* bordas arredondadas */
+  padding: 20px;
+  /* espaçamento interno */
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+  /* sombra suave */
 }
 
 /* Parágrafos centrais */
 .text-interno-inicio {
-  justify-self: center; /* Alinha ao centro (redundante) */
-  text-align: center; /* Alinhamento central */
-  padding: 15px; /* Espaçamento interno */
+  justify-self: center;
+  /* Alinha ao centro (redundante) */
+  text-align: center;
+  /* Alinhamento central */
+  padding: 15px;
+  /* Espaçamento interno */
 }
 
 /* Segundo parágrafo central */
 .text-interno-inicio2 {
-  justify-self: center; /* Alinha ao centro (redundante) */
-  text-align: center; /* Alinhamento central */
-  padding: 10px; /* Espaçamento interno */
-  padding-bottom: 0; /* Remove padding inferior */
-  font-size: 12px;
+  justify-self: center;
+  /* Alinha ao centro (redundante) */
+  text-align: center;
+  /* Alinhamento central */
+  padding: 10px;
+  /* Espaçamento interno */
+  padding-bottom: 0;
+  /* Remove padding inferior */
 }
 
 /* Título principal */
 h2 {
-  justify-content: center; /* Centraliza conteúdo (redundante) */
-  text-align: center; /* Centraliza o texto */
-  padding: 5px; /* Espaçamento interno */
+  justify-content: center;
+  /* Centraliza conteúdo (redundante) */
+  text-align: center;
+  /* Centraliza o texto */
+  padding: 5px;
+  /* Espaçamento interno */
 }
 
 /* Container das caixas de cálculo */
 .container-calculo {
-  display: flex; /* Usa flexbox */
-  flex-wrap: wrap; /* Permite quebra de linha */
-  justify-content: center; /* Centraliza os itens */
-  gap: 20px; /* Espaço entre as caixas */
-  padding: 20px; /* Espaçamento interno */
+  display: flex;
+  /* Usa flexbox */
+  flex-wrap: wrap;
+  /* Permite quebra de linha */
+  justify-content: center;
+  /* Centraliza os itens */
+  gap: 20px;
+  /* Espaço entre as caixas */
+  padding: 20px;
+  /* Espaçamento interno */
 }
 
 /* Caixa individual de cálculo */
 .caixaCalculo {
-  max-width: 330px; /* Largura máxima */
-  width: 100%; /* Largura total dentro do limite */
-  padding: 25px; /* Espaçamento interno */
-  border: 1px solid #ccc; /* Borda cinza */
-  border-radius: 12px; /* Bordas arredondadas */
-  text-align: center; /* Centraliza o texto */
+  max-width: 360px;
+  /* Largura máxima */
+  width: 100%;
+  /* Largura total dentro do limite */
+  padding: 25px;
+  /* Espaçamento interno */
+  border-radius: 12px;
+  /* Bordas arredondadas */
+  text-align: center;
+  /* Centraliza o texto */
+}
+
+/* Caixa individual de cálculo2 */
+.caixaCalculo2 {
+  max-width: 360px;
+  /* Largura máxima */
+  width: 100%;
+  /* Largura total dentro do limite */
+  padding: 25px;
+  /* Espaçamento interno */
+  border-radius: 12px;
+  /* Bordas arredondadas */
+  text-align: center;
+  /* Centraliza o texto */
 }
 
 /* Estilo dos campos de entrada */
 input {
-  background: #f2f2f2; /* Cor de fundo cinza claro */
-  margin-bottom: 5px; /* Espaço inferior */
-  padding-top: 10px; /* Espaço superior interno */
-  font-size: 14px; /* Tamanho da fonte */
-  width: 50%; /* Largura do campo */
-  text-align: center; /* Texto centralizado */
-  border-radius: 5px; /* Bordas arredondadas */
+  background: #f2f2f2;
+  /* Cor de fundo cinza claro */
+  margin-bottom: 5px;
+  /* Espaço inferior */
+  padding-bottom: 5px;
+  padding-top: 5px;
+  /* Espaço superior interno */
+  font-size: 14px;
+  /* Tamanho da fonte */
+  width: 50%;
+  /* Largura do campo */
+  text-align: center;
+  /* Texto centralizado */
+  border-radius: 5px;
+  /* Bordas arredondadas */
 }
 
 /* Estilo dos botões */
 button {
-  background: #666666; /* Cor de fundo cinza escuro */
-  padding: 8px 12px; /* Espaçamento interno */
-  border-radius: 12px; /* Bordas arredondadas */
-  color: #fff; /* Cor do texto branco */
-  font-size: 12px; /* Tamanho da fonte */
-  cursor: pointer; /* Cursor de clique */
-  transition: 0.3s; /* Transição suave */
+  background: #666666;
+  /* Cor de fundo cinza escuro */
+  padding: 8px 12px;
+  /* Espaçamento interno */
+  border-radius: 12px;
+  /* Bordas arredondadas */
+  color: #f2f2f2;
+  /* Cor do texto branco */
+  font-size: 12px;
+  /* Tamanho da fonte */
+  cursor: pointer;
+  /* Cursor de clique */
+  transition: 0.3s;
+  /* Transição suave */
+}
+
+#resAnt, #resPos {
+  font-size: 23px;
 }
 
 /* Caixa de resultado */
 .dataCorreta {
-  padding: 6px; /* Espaçamento interno */
+  padding: 6px;
+  /* Espaçamento interno */
 }
 
 /* Estilo do botão ao passar o mouse */
 button:hover {
-  background: #fff; /* Cor de fundo branca */
-  color: #666; /* Cor do texto cinza */
-  border: 1px solid #666; /* Borda visível */
+  background: #f2f2f2;
+  /* Cor de fundo branca */
+  color: #666;
+  /* Cor do texto cinza */
 }
 
 /* Rodapé da página */
 footer {
-  margin-top: auto; /* Empurra para o final da página */
-  padding: 20px 0; /* Espaçamento interno vertical */
-  text-align: center; /* Centraliza o conteúdo */
+  font-size: 12px;
+  margin-top: auto;
+  /* Empurra para o final da página */
+  padding: 2px 0;
+  /* Espaçamento interno vertical */
+  text-align: center;
+  /* Centraliza o conteúdo */
 }
 
 /* Texto do rodapé */
 .p-footer {
-  color: #666; /* Cor cinza */
-  font-size: 0.8rem; /* Tamanho menor */
+  
+  color: #ddd;
+  /* Cor cinza */
+  font-size: 0.8rem;
+  /* Tamanho menor */
+}
+
+#data-hora {
+  color: #ddd;
 }
 
 /* Links sociais */
 .social-links {
-  display: flex; /* Usa flexbox */
-  justify-content: center; /* Centraliza os itens */
-  gap: 20px; /* Espaço entre os ícones */
-  list-style: none; /* Remove marcadores */
-  margin-top: 10px; /* Espaço superior */
+  color: #ddd;
+  display: flex;
+  /* Usa flexbox */
+  justify-content: center;
+  /* Centraliza os itens */
+  gap: 15px;
+  /* Espaço entre os ícones */
+  list-style: none;
+  /* Remove marcadores */
+  margin-top: 5px;
+  /* Espaço superior */
+}
+
+.social-links i{
+  color: #ddd;
 }
 
 /* Estilo responsivo para telas menores */
 @media screen and (max-width: 768px) {
   .center {
-    flex-direction: column; /* Coluna em vez de linha */
-    align-items: center; /* Centraliza os itens */
+    flex-direction: column;
+    /* Coluna em vez de linha */
+    align-items: center;
+    /* Centraliza os itens */
   }
 
   .logo {
-    margin-bottom: 10px; /* Espaço inferior */
+    margin-bottom: 10px;
+    /* Espaço inferior */
   }
 
   .hamburger {
-    display: block; /* Exibe ícone do menu */
+    display: block;
+    /* Exibe ícone do menu */
   }
 
   .list-topo {
-    display: none; /* Esconde menu padrão */
-    flex-direction: column; /* Organiza verticalmente */
-    align-items: center; /* Centraliza os links */
-    width: 100%; /* Largura total */
-    margin-top: 10px; /* Espaço superior */
+    display: none;
+    /* Esconde menu padrão */
+    flex-direction: column;
+    /* Organiza verticalmente */
+    align-items: center;
+    /* Centraliza os links */
+    width: 100%;
+    /* Largura total */
+    margin-top: 10px;
+    /* Espaço superior */
   }
 
   .list-topo.active {
-    display: flex; /* Exibe menu quando ativo */
+    display: flex;
+    /* Exibe menu quando ativo */
   }
 
   .container-calculo {
-    flex-direction: column; /* Coluna para caixas de cálculo */
-    align-items: center; /* Centraliza as caixas */
+    flex-direction: column;
+    /* Coluna para caixas de cálculo */
+    align-items: center;
+    /* Centraliza as caixas */
   }
 
   .caixaCalculo {
-    max-width: 90%; /* Reduz largura máxima */
+    max-width: 90%;
+    /* Reduz largura máxima */
   }
 
   .social-links {
-    flex-wrap: wrap; /* Permite quebra de linha */
-    gap: 10px; /* Reduz espaço entre os ícones */
+    flex-wrap: wrap;
+    /* Permite quebra de linha */
+    gap: 10px;
+    /* Reduz espaço entre os ícones */
+  }
+
+  .p-footer{
+    color:darkgrey;
   }
 }
 
 /* Estilo da seção FAQ */
 .faq-section {
-  max-width: 800px; /* Largura máxima */
-  margin: 0 auto; /* Centraliza na página */
-  padding: 20px; /* Espaçamento interno */
+  max-width: 800px;
+  /* Largura máxima */
+  margin: 0 auto;
+  /* Centraliza na página */
+  padding: 20px;
+  /* Espaçamento interno */
 }
 
 /* Título da FAQ */
 .faq-title {
-  text-align: center; /* Centraliza o texto */
-  font-size: 28px; /* Tamanho da fonte */
-  margin-bottom: 20px; /* Espaço inferior */
+  text-align: center;
+  /* Centraliza o texto */
+  font-size: 28px;
+  /* Tamanho da fonte */
+  margin-bottom: 20px;
+  /* Espaço inferior */
 }
 
 /* Contêiner do acordeão */
 .accordion_faq {
-  border: 1px solid #ccc; /* Borda cinza */
-  border-radius: 8px; /* Bordas arredondadas */
-  overflow: hidden; /* Esconde conteúdo que passar */
+  border: 1px solid #ccc;
+  /* Borda cinza */
+  border-radius: 8px;
+  /* Bordas arredondadas */
+  overflow: hidden;
+  /* Esconde conteúdo que passar */
 }
 
 /* Divisores do acordeão */
-.accordion > div {
-  border-bottom: 1px solid #ccc; /* Linha separadora */
+.accordion>div {
+  border-bottom: 1px solid #ccc;
+  /* Linha separadora */
 }
 
 /* Esconde os inputs do acordeão */
 .accordion_input {
-  display: none; /* Esconde os radio buttons/checkboxes */
+  display: none;
+  /* Esconde os radio buttons/checkboxes */
 }
 
 /* Cabeçalho do acordeão */
 .accordion_label {
-  display: block; /* Ocupa linha inteira */
-  padding: 15px 20px; /* Espaçamento interno */
-  background-color: #f7f7f7; /* Cor de fundo clara */
-  cursor: pointer; /* Mostra cursor de clique */
-  font-weight: bold; /* Texto em negrito */
-  transition: background-color 0.3s; /* Transição suave */
+  display: block;
+  /* Ocupa linha inteira */
+  padding: 15px 20px;
+  /* Espaçamento interno */
+  background-color: #f7f7f7;
+  /* Cor de fundo clara */
+  cursor: pointer;
+  /* Mostra cursor de clique */
+  font-weight: bold;
+  /* Texto em negrito */
+  transition: background-color 0.3s;
+  /* Transição suave */
 }
 
 /* Hover no cabeçalho do acordeão */
 .accordion_label:hover {
-  background-color: #e0e0e0; /* Cor mais escura ao passar o mouse */
+  background-color: #e0e0e0;
+  /* Cor mais escura ao passar o mouse */
 }
 
 /* Conteúdo do acordeão */
 .accordion_content {
-  max-height: 0; /* Esconde inicialmente */
-  overflow: hidden; /* Esconde conteúdo extra */
-  padding: 0 20px; /* Espaço lateral */
-  background-color: #fff; /* Fundo branco */
-  transition: max-height 0.3s ease, padding 0.3s ease; /* Transições suaves */
+  max-height: 0;
+  /* Esconde inicialmente */
+  overflow: hidden;
+  /* Esconde conteúdo extra */
+  padding: 0 20px;
+  /* Espaço lateral */
+  background-color: #fff;
+  /* Fundo branco */
+  transition: max-height 0.3s ease, padding 0.3s ease;
+  /* Transições suaves */
 }
 
 /* Quando ativo, muda o fundo do label */
-.accordion_input:checked ~ .accordion_label {
-  background-color: #dfefff; /* Fundo azul claro */
+.accordion_input:checked~.accordion_label {
+  background-color: #dfefff;
+  /* Fundo azul claro */
 }
 
 /* Quando ativo, exibe o conteúdo */
-.accordion_input:checked ~ .accordion_content {
-  max-height: 200px; /* Altura máxima visível */
-  padding: 15px 20px; /* Espaçamento interno */
+.accordion_input:checked~.accordion_content {
+  max-height: 200px;
+  /* Altura máxima visível */
+  padding: 15px 20px;
+  /* Espaçamento interno */
 }
 
 /* Parágrafos dentro do acordeão */
 .accordion_p {
-  margin: 0; /* Remove margens padrão */
-  font-size: 16px; /* Tamanho da fonte */
-  line-height: 1.5; /* Altura da linha */
+  margin: 0;
+  /* Remove margens padrão */
+  font-size: 16px;
+  /* Tamanho da fonte */
+  line-height: 1.5;
+  /* Altura da linha */
 }

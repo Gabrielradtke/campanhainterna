@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+  <link rel="shortcut icon" href="imagens/faviconLogoNovo.ico" type="image/x-icon">
+  <script src="https://kit.fontawesome.com/50f803a4dc.js" crossorigin="anonymous"></script>
+  <title>INTERVALO ENTRE PARTOS</title>
+</head>
+
+<body>
+  <div id="particles-js"></div>
+
+  <header>
+    <div class="center">
+      <a href="https://intervaloentrepartos.netlify.app/" class="logo">
+        <img src="/campanhainterna/imagens/logo.png" alt="Logo">
+      </a>
+
+      <nav class="nav-bar">
+        <div class="hamburger" id="hamburger">
+          <i class="fas fa-bars"></i>
+        </div>
+
+        <ul class="list-topo" id="nav-links">
+          <li class="header-topo"><a href="https://gabrielradtke.netlify.app/">PORTFOLIO</a></li>
+          <li class="header-topo"><a href="faq.html">FAQ</a></li>
+          <li class="header-topo"><a href="https://gabrielradtke.netlify.app/">CONTATOS</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <section>
+    <div class="text-inicio">
+      <h2>INTERVALO ENTRE PARTOS</h2>
+      <p class="text-interno-inicio">
+        Conforme regulamento do Serviço Genealógico da ABCCC disposto no Art. 50, não serão inscritos produtos que
+        venham a nascer com período de gestação inferior a 310 (trezentos e dez) e superior a 365 (trezentos e sessenta e cinco) dias.
+      </p>
+
+      <p class="text-interno-inicio2">
+        Com isso as tabelas abaixo possuem a intenção de auxiliar de forma simples e rápida no cálculo correto.
+      </p>
+
+      <br>
+
+      <div class="container-calculo">
+        <div class="caixaCalculo">
+          <p class="texto-interno-calculo">Inserir a data de <br>nascimento ANTERIOR</p>
+          <input type="date" id="start">
+          <button>Calcular Data</button>
+          <div class="dataCorreta">
+            <p class="texto-interno-calculo">Data Correta é:</p>
+            <div id="resAnt"></div>
+          </div>
+        </div>
+
+        <div class="caixaCalculo">
+          <p class="texto-interno-calculo">Inserir a data de <br>nascimento POSTERIOR</p>
+          <input type="date" id="startPosterior">
+          <button id="button2">Calcular Data</button>
+          <div class="dataCorreta">
+            <p class="texto-interno-calculo">Data Correta é:</p>
+            <div id="resPos"></div>
+          </div>
+        </div>
+      </div>
+
+      <p class="text-interno-inicio2">
+        Este projeto foi desenvolvido de forma independente com a intenção para estudos sobre programação.
+      </p>
+    </div>
+  </section>
+
+  <footer>
+    <div id="data-hora"></div>
+    <br>
+    <p class="p-footer">Gabriel Radtke &copy; 2025</p>
+    <ul class="social-links">
+      <li><a href="https://www.facebook.com/gabrielradtke" target="_blank"><i class="fab fa-facebook"></i></a></li>
+      <li><a href="https://www.twitter.com/gabrielradtke" target="_blank"><i class="fab fa-twitter"></i></a></li>
+      <li><a href="https://www.linkedin.com/in/gabrielradtke/" target="_blank"><i class="fab fa-linkedin"></i></a></li>
+      <li><a href="https://www.github.com/gabrielradtke" target="_blank"><i class="fab fa-github"></i></a></li>
+      <li><a href="https://www.instagram.com/gabrielradtke" target="_blank"><i class="fab fa-instagram"></i></a></li>
+    </ul>
+  </footer>
+
+  <script>
+    const hamburger = document.getElementById('hamburger');
+    const navLinks = document.getElementById('nav-links');
+
+    hamburger.addEventListener('click', () => {
+      navLinks.classList.toggle('active');
+    });
+  </script>
+
+  <script src="https://cdn.jsdelivr.net/npm/tsparticles@3.3.0/tsparticles.bundle.min.js"></script>
+  <script>
+    tsParticles.load("particles-js", {
+      fullScreen: {
+        enable: true,
+        zIndex: -1
+      },
+      particles: {
+        number: { value: 40, density: { enable: true, area: 800 } },
+        color: { value: "#0B5261" },
+        shape: { type: "circle" },
+        opacity: { value: 0.5, random: true },
+        size: { value: 2, random: true },
+        move: {
+          enable: true,
+          speed: 1,
+          direction: "none",
+          outModes: { default: "bounce" }
+        }
+      },
+      interactivity: {
+        events: { onHover: { enable: false }, onClick: { enable: false } }
+      },
+      background: { color: "#ffffff" }
+    });
+  </script>
+
+  <script src="index.js"></script>
+</body>
+</html>
