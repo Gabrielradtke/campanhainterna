@@ -22,7 +22,7 @@ body {
   /* Usa flexbox */
   flex-direction: column;
   /* Organiza os filhos em coluna */
-  background-image: url(/campanhainterna/imagens/unnamed.jpg);
+  background-image: url(/imagens/unnamed.jpg);
   background-size: cover;
   z-index: -1;
 }
